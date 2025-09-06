@@ -96,3 +96,25 @@ Here you’ll see the branded iPop Support UI.
 Once running:
 - Speak or type a query like “How do I reset my phone?”
 - iPop Support Agent listens with Deepgram, reasons with Google Gemini, checks knowledge base in Pinecone, and responds with Cartesia voice.
+
+---
+
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+    User["User"] --> LiveKit["LiveKit Voice"]
+    LiveKit --> Deepgram["Deepgram STT - Nova-3"]
+    Deepgram --> GeminiQuery["Send Query to Gemini 1.5"]
+    GeminiQuery --> GeminiLLM["Gemini LLM Generates Response"]
+
+    GeminiLLM -->|External Knowledge Required?| KnowledgeCheck{External Knowledge Required?}
+
+    KnowledgeCheck -->|Yes| Pinecone["Query Pinecone Assistant Knowledge Base"]
+    KnowledgeCheck -->|No| GeminiResponse["Use Gemini Response"]
+
+    Pinecone --> Merge["Merge Gemini Response with Retrieved Context"]
+    GeminiResponse --> Merge
+    Merge --> Cartesia["Cartesia TTS - Sonic-2"]
+    Cartesia --> Output["LiveKit Streams Voice and Video Output"]
+    Output --> User
