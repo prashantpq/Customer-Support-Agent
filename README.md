@@ -108,7 +108,7 @@ flowchart TD
     Deepgram --> GeminiQuery["Send Query to Gemini 1.5"]
     GeminiQuery --> GeminiLLM["Gemini LLM Generates Response"]
 
-    GeminiLLM -->|External Knowledge Required?| KnowledgeCheck{External Knowledge Required?}
+    GeminiLLM --> KnowledgeCheck{External Knowledge Required?}
 
     KnowledgeCheck -->|Yes| Pinecone["Query Pinecone Assistant Knowledge Base"]
     KnowledgeCheck -->|No| GeminiResponse["Use Gemini Response"]
@@ -116,5 +116,5 @@ flowchart TD
     Pinecone --> Merge["Merge Gemini Response with Retrieved Context"]
     GeminiResponse --> Merge
     Merge --> Cartesia["Cartesia TTS - Sonic-2"]
-    Cartesia --> Output["LiveKit Streams Voice and Video Output"]
+    Cartesia --> Output["LiveKit Streams Voice"]
     Output --> User
