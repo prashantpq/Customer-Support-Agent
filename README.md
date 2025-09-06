@@ -74,3 +74,12 @@ Dev Mode
 ```bash
 python3 agent.py dev
 ```
+
+### Run Frontend
+```bash
+cd agent-starter-react
+pnpm install
+pnpm dev
+```
+Frontend will be available at -> http://localhost:3000.
+Here you’ll see the branded iPop Support UI. 
