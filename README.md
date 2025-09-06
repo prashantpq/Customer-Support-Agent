@@ -19,11 +19,11 @@ It provides real-time conversational assistance, knowledge base search, and a mo
 ---
 
 ## Project Structure
-
+```
 Customer-Support-Agent/
 │── agent.py # Main Python agent runner
 │── .env # Environment variables (create your own)
 │── .gitignore
 │── agent-starter-react/ # Next.js + React frontend (UI shows "iPop Support")
 
----
+```
