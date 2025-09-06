@@ -37,3 +37,8 @@ git clone https://github.com/prashantpq/Customer-Support-Agent.git
 cd Customer-Support-Agent
 ```
 
+### 2 Python Environment
+```bash
+conda create -n customer python=3.11 -y
+conda activate customer
+```
