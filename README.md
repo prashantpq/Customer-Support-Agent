@@ -83,3 +83,16 @@ pnpm dev
 ```
 Frontend will be available at -> http://localhost:3000.
 Here you’ll see the branded iPop Support UI. 
+
+---
+
+## Troubleshooting
+- KeyError: 'PINECONE_API_KEY' → Check your .env file is loaded.
+- LIVEKIT_API_SECRET is not defined → Add it in .env and .env.local.
+
+---
+
+## Demo Usage
+Once running:
+- Speak or type a query like “How do I reset my phone?”
+- iPop Support Agent listens with Deepgram, reasons with Google Gemini, checks knowledge base in Pinecone, and responds with Cartesia voice.
