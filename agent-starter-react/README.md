@@ -17,7 +17,6 @@ Also available for:
 - Camera video streaming support
 - Screen sharing capabilities
 - Audio visualization and level monitoring
-- Virtual avatar integration
 - Light/dark theme switching with system preference detection
 - Customizable branding, colors, and UI text via configuration
 
