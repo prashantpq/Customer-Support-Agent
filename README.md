@@ -42,3 +42,35 @@ cd Customer-Support-Agent
 conda create -n customer python=3.11 -y
 conda activate customer
 ```
+
+### 3 Environement Variables
+```bash
+# LiveKit API (realtime agent infra)
+LIVEKIT_URL=https://your-livekit-server-url
+LIVEKIT_API_KEY=your_livekit_key
+LIVEKIT_API_SECRET=your_livekit_secret
+
+# Pinecone (knowledge base)
+PINECONE_API_KEY=your_pinecone_key
+
+# Cartesia (voice generation)
+CARTESIA_API_KEY=your_cartesia_key
+
+# Deepgram (speech recognition)
+DEEPGRAM_API_KEY=your_deepgram_key
+
+# Google Gemini (LLM reasoning)
+GEMINI_API_KEY=your_gemini_key
+
+```
+
+### 4 Run Agent
+Console Mode
+```bash
+python3 agent.py console
+```
+
+Dev Mode
+```bash
+python3 agent.py dev
+```
