@@ -1,8 +1,8 @@
 # iPop Support Agent
 
-An AI-powered **customer support agent** branded as **iPop**  
-Built with **LiveKit**, **Cartesia (Voice)**, **Deepgram (Speech-to-Text)**, **Google Gemini (LLM)**, **Pinecone (Vector DB)**, and a **React frontend**.  
-It provides real-time conversational assistance, knowledge base search, and a modern UI.
+- An AI-powered **customer support agent** branded as **iPop**  
+- Built with **LiveKit**, **Cartesia (Voice)**, **Deepgram (Speech-to-Text)**, **Google Gemini (LLM)**, **Pinecone (Vector DB)**, and a **React frontend**.  
+- It provides real-time conversational assistance, knowledge base search, and a modern UI.
 
 ---
 
