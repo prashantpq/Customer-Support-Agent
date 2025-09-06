@@ -27,3 +27,13 @@ Customer-Support-Agent/
 │── agent-starter-react/ # Next.js + React frontend (UI shows "iPop Support")
 
 ```
+---
+
+## Setup
+
+### 1️ Clone the repo
+```bash
+git clone https://github.com/prashantpq/Customer-Support-Agent.git
+cd Customer-Support-Agent
+```
+
