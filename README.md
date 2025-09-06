@@ -39,8 +39,12 @@ cd Customer-Support-Agent
 
 ### 2 Python Environment
 ```bash
-conda create -n customer python=3.11 -y
-conda activate customer
+# Create a virtual environment
+python3 -m venv customer
+
+# Activate the virtual environment
+source customer/bin/activate   # On Mac/Linux
+customer\Scripts\activate      # On Windows
 ```
 
 ### 3 Environement Variables
