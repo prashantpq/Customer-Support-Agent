@@ -37,7 +37,7 @@ git clone https://github.com/prashantpq/Customer-Support-Agent.git
 cd Customer-Support-Agent
 ```
 
-### 2 Python Environment
+### 2 Python Environment and Dependencies
 ```bash
 # Create a virtual environment
 python3 -m venv customer
