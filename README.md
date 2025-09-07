@@ -45,8 +45,10 @@ python3 -m venv customer
 # Activate the virtual environment
 source customer/bin/activate   # On Mac/Linux
 customer\Scripts\activate      # On Windows
+
 # Install requirements
 pip install -r requirements.txt
+
 # Download files for agent
 python3 agent.py download-files
 ```
