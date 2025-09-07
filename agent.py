@@ -16,13 +16,6 @@ load_dotenv()
 pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
 assistant = pc.assistant.Assistant(assistant_name=os.environ["ASSISTANT_NAME"])
 
-KB_FILE = "ipop_phone_support_guide.pdf"
-if os.path.exists(KB_FILE):
-    assistant.upload_document(KB_FILE)
-    print(f"[INFO] Uploaded KB: {KB_FILE}")
-else:
-    print(f"[WARN] Knowledge base file not found: {KB_FILE}")
-
 from livekit.agents.llm import function_tool
 
 @function_tool
@@ -39,8 +32,7 @@ class Assistant(Agent):
                 "You are an iPop customer service AI assistant. "
                 "Use the 'ask_knowledge_base' tool for any iPop-related questions. "
                 "Keep responses conversational and helpful. "
-                "Format numbers and units naturally for speech — "
-                "say 'five hundred and twelve gigabytes' instead of 'five one two GB', "
+                "Format numbers and units naturally for speech — say 'five hundred and twelve gigabytes' instead of 'five one two GB', "
                 "'one hundred and twenty-eight gigabytes' instead of 'one two eight GB', "
                 "and 'one terabyte' instead of 'one TB'."
             ),
@@ -78,5 +70,4 @@ async def entrypoint(ctx: agents.JobContext):
 
 if __name__ == "__main__":
     agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))
-
 
